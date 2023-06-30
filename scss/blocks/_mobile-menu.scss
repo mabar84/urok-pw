@@ -1,0 +1,43 @@
+.menu-accordion-header {
+    transition: border-radius 0.9s ease-out;
+    border-radius: 8px;
+    &.active {
+        @include for-760-px {
+            border-radius: 8px 8px 0px 0px;
+        }
+        @include for-760-px {
+            .img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.menu-accordion-content {
+    display: none;
+    width: 280px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background: #ffac4e;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    transition: padding 0.7s ease-out;
+    overflow: hidden;
+    padding: 11px 16px;
+    border-radius: 8px;
+    @include for-760-px {
+        padding: 0;
+        border-radius: 0px 0px 8px 8px;
+        display: block;
+    }
+    &.active {
+        max-height: max-content;
+        display: block;
+        @include for-760-px {
+            padding: 9px 0;
+        }
+    }
+}
