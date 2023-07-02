@@ -1,11 +1,14 @@
 .main {
     .content {
-        padding: 20px 40px;
+        padding: 20px 30px 30px 10px;
+        margin: 0 60px;
     }
     .main-list {
         list-style-type: none;
         counter-reset: num;
         font-size: 13px;
+        margin-bottom: 20px;
+        display: none;
         li {
             padding: 10px 0;
             position: relative;

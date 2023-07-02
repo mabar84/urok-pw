@@ -2,7 +2,7 @@
     display: flex;
     background-color: #5a80b1;
     align-items: center;
-    justify-content: center;
+    padding: 0 40px;
     .menu-item {
         white-space: nowrap;
         position: relative;
@@ -12,7 +12,7 @@
             color: #fff;
             display: block;
             position: relative;
-            padding: 18px 20px;
+            padding: 20px 20px;
             &::before {
                 content: "";
                 position: absolute;
@@ -28,21 +28,30 @@
                 border-color: rgba(255, 255, 255, 0.7) transparent transparent transparent;
                 transition: 0.3s;
             }
+            &:hover {
+                transition: 0.3s;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
         .submenu {
             display: none;
             padding: 0;
             position: absolute;
             background-color: #5a80b1;
+            z-index: 1;
             .submenu-item {
                 color: #fff;
                 border-top: 1px solid rgba(255, 255, 255, 0.2);
                 white-space: nowrap;
-                padding: 18px 0px;
                 z-index: 1;
                 position: relative;
+                &:hover {
+                    transition: 0.3s;
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
                 & a {
-                    margin: 0 18px;
+                    padding: 18px;
+                    display: block;
                 }
             }
         }

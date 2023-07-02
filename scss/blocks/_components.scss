@@ -4,26 +4,33 @@
     padding: 20px;
     border-bottom: 2px solid #5a80b1;
 }
+.block-title {
+    margin: 1.5em 0 0.5em;
+    word-wrap: break-word;
+    font-size: 1.5em;
+    font-weight: 600;
+}
 .text {
     margin-bottom: 25px;
     font-size: 14px;
     word-wrap: break-word;
 }
-.forhover {
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.1);
-        transition: 0.3s;
-        display: none;
-    }
-    &:hover {
-        &::after {
-            display: block;
+.simple-list {
+    margin: 1.7em 0 1.8em 1em;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    li {
+        list-style: none;
+        padding-left: 40px;
+        margin: 0.7em 0;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #5a80b1;
+            margin: 0 22px 0 -30px;
         }
     }
 }

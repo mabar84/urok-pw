@@ -1,25 +1,3 @@
-const olLiA = document.querySelectorAll(".entry-content li a");
-const mainList = document.querySelector(".main-list");
-let content = document.querySelector(".content");
-let li = document.createElement("li");
-let a = document.createElement("a");
-
-console.log(olLiA[5].textContent);
-
-olLiA.forEach((el) => {
-  mainList.insertAdjacentHTML(
-    "beforeend",
-    `
-      <li>
-        <a href="#">${el.textContent}</a>
-      </li>
-    `
-  );
-});
-
-content.insertAdjacentHTML("beforeend", "<p>123</p>");
-// olLiA.forEach((el) => {});
-
 const navMenu = document.querySelector(".nav_menu");
 const menuItems = navMenu.querySelectorAll(".menu-item");
 const allSubMenu = document.querySelectorAll(".submenu");
