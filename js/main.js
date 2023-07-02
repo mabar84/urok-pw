@@ -1,12 +1,32 @@
-// const searchInput = document.getElementById("header-search_input");
-// const classSelect = document.getElementById("class-select");
-const menu = document.querySelector(".nav_menu");
-const menuItems = menu.querySelectorAll(".menu-item");
+const olLiA = document.querySelectorAll(".entry-content li a");
+const mainList = document.querySelector(".main-list");
+let content = document.querySelector(".content");
+let li = document.createElement("li");
+let a = document.createElement("a");
+
+console.log(olLiA[5].textContent);
+
+olLiA.forEach((el) => {
+  mainList.insertAdjacentHTML(
+    "beforeend",
+    `
+      <li>
+        <a href="#">${el.textContent}</a>
+      </li>
+    `
+  );
+});
+
+content.insertAdjacentHTML("beforeend", "<p>123</p>");
+// olLiA.forEach((el) => {});
+
+const navMenu = document.querySelector(".nav_menu");
+const menuItems = navMenu.querySelectorAll(".menu-item");
 const allSubMenu = document.querySelectorAll(".submenu");
 // const navButtons = document.querySelectorAll(".nav-button");
 // const navButtonsMobile = document.querySelector(".nav-buttons_mobile");
 // const navMenuMobile = document.querySelector(".nav-menu_mobile");
-const navMenuMobile = document.querySelector(".nav-buttons");
+// const navMenuMobile = document.querySelector(".nav-buttons");
 
 // site-navigate
 // navButtons.forEach((btn) => {
@@ -60,13 +80,12 @@ if (window.innerWidth > 991) {
       menuItems.forEach((item) => {
         item.classList.remove("active");
       });
-
       el.classList.add("active");
-
-      // allSubMenu.forEach((el) => {
-      //   el.classList.remove("active");
-      // });
-      // subMenu?.classList.add("active");
+    });
+  });
+  navMenu.addEventListener("mouseleave", () => {
+    menuItems.forEach((item) => {
+      item.classList.remove("active");
     });
   });
 }

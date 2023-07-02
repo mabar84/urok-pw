@@ -1,16 +1,15 @@
 .nav_menu {
     display: flex;
     background-color: #5a80b1;
-    color: #fff;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
     .menu-item {
         white-space: nowrap;
         position: relative;
         cursor: pointer;
 
         .menu-item_name {
+            color: #fff;
             display: block;
             position: relative;
             padding: 18px 20px;
@@ -36,9 +35,11 @@
             position: absolute;
             background-color: #5a80b1;
             .submenu-item {
+                color: #fff;
                 border-top: 1px solid rgba(255, 255, 255, 0.2);
                 white-space: nowrap;
                 padding: 18px 0px;
+                z-index: 1;
                 position: relative;
                 & a {
                     margin: 0 18px;

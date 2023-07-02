@@ -1,187 +1,39 @@
-.main.home {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    column-gap: 24px;
-    row-gap: 60px;
-    grid-template-columns: 1fr 270px;
-    grid-template-areas:
-        "subjects banners"
-        "books banners"
-        "question banners";
-    @include for-1340-px {
-        grid-gap: 60px;
-        grid-template-columns: calc(100vw - 108px);
-        grid-template-areas:
-            "subjects"
-            "books"
-            "banners "
-            "question";
+.main {
+    .content {
+        padding: 20px 40px;
     }
-    @include for-1000-px {
-        grid-template-columns: calc(100vw - 40px);
-        grid-gap: 40px;
-    }
-    @include for-640-px {
-        grid-template-columns: calc(100vw - 20px);
-        grid-gap: 30px;
-    }
-    .subjects {
-        grid-area: subjects;
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 12px;
-        row-gap: 12px;
-        @include for-1340-px {
-            justify-content: center;
-        }
-        .card {
-            width: 292px;
-            height: 210px;
-            overflow: hidden;
-            @include for-640-px {
-                width: 301px;
-            }
-            .top {
-                display: flex;
-                gap: 12px;
-            }
-            .name {
-                padding-top: 10px;
-                margin-bottom: 14px;
-                font-weight: 600;
-                font-size: 18px;
-                line-height: 24px;
-                &.math {
-                    color: #4599f9;
-                }
-                &.geom {
-                    color: #c06700;
-                }
-                &.phys {
-                    color: #0c40f9;
-                }
-                &.alg {
-                    color: #ee6046;
-                }
-                &.lit {
-                    color: #d78528;
-                }
-                &.hist {
-                    color: #979221;
-                }
-                &.eng {
-                    color: #ee6046;
-                }
-                &.geo {
-                    color: #0b6ca1;
-                }
-                &.rus {
-                    color: #80641b;
-                }
-                &.bio {
-                    color: #0c9d09;
-                }
-                &.chem {
-                    color: #803f90;
-                }
-                &.world {
-                    color: #904500;
-                }
-                &.inform {
-                    color: #002c55;
-                }
-                &.de {
-                    color: #593221;
-                }
-                &.obj {
-                    color: #6c0404;
-                }
-                &.tech {
-                    color: #02662a;
-                }
-                &.soc {
-                    color: #383600;
-                }
-                &.mus {
-                    color: #7e0f74;
-                }
-            }
-            .classes {
-                font-size: 14px;
-                line-height: 22px;
-            }
-            .bottom {
-                padding: 22px 16px;
-                display: flex;
-                flex-wrap: wrap;
-                column-gap: 16px;
-                row-gap: 22px;
-                @include for-640-px {
-                    column-gap: 17px;
-                }
-            }
-        }
-    }
-    .question {
-        grid-area: question;
-        .card {
-            padding: 60px 24px;
-            gap: 86px;
+    .main-list {
+        list-style-type: none;
+        counter-reset: num;
+        font-size: 13px;
+        li {
+            padding: 10px 0;
+            position: relative;
             display: flex;
+            align-items: center;
+            a {
+                color: #428bca;
+                margin-left: 35px;
+                &:hover {
+                    color: #e66212;
+                }
+            }
+        }
+        li:before {
+            content: counter(num) "";
+            counter-increment: num;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            color: #333;
+            font-size: 13px;
+            border-radius: 50%;
+            width: 27px;
+            height: 27px;
+            border: 2px solid #425d9d;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            @include for-1000-px {
-                gap: 16px;
-                align-items: center;
-            }
-            @include for-760-px {
-                padding: 16px;
-                flex-direction: column;
-            }
-        }
-        &-image {
-            width: 364px;
-            height: 318px;
-            object-fit: cover;
-            @include for-1000-px {
-                width: 285px;
-                height: 249px;
-            }
-        }
-        .wrapper {
-            padding: 16px 0;
-            @include for-1000-px {
-                padding: 0;
-            }
-            .title {
-                margin-bottom: 24px;
-                font-weight: 600;
-                font-size: 30px;
-                line-height: 42px;
-
-                @include for-1000-px {
-                    font-size: 26px;
-                }
-                @include for-760-px {
-                    margin-bottom: 16px;
-                    font-size: 20px;
-                    line-height: 28px;
-                }
-            }
-            .text {
-                width: 400px;
-                font-size: 16px;
-                line-height: 22px;
-
-                @include for-1000-px {
-                    font-size: 12px;
-                    width: auto;
-                }
-                @include for-760-px {
-                    font-size: 14px;
-                    line-height: 22px;
-                }
-            }
         }
     }
 }
