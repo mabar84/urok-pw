@@ -21,11 +21,23 @@ if (window.innerWidth > 991) {
 } else {
   menuItems.forEach((el) => {
     el.addEventListener("click", (e) => {
-      el.classList.toggle("active");
+      if (el.classList.contains("active")) {
+        menuItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+      } else {
+        menuItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+        el.classList.add("active");
+      }
     });
   });
   mobHamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+    menuItems.forEach((item) => {
+      item.classList.remove("active");
+    });
   });
 }
 
