@@ -532,3 +532,20 @@ body {
 .lessons-list li a:hover {
   text-decoration: underline;
 }
+
+.books.content {
+  padding: 0px 40px;
+}
+.books .text {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #777;
+  margin-top: 15px;
+}
+.books .alignleft {
+  max-width: 150px;
+  height: auto;
+  border-style: none;
+  float: left;
+  margin: 0 45px 15px 0;
+}
