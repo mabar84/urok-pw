@@ -149,6 +149,9 @@ body {
   display: block;
 }
 
+.main {
+  position: relative;
+}
 .main .content {
   padding: 20px 30px 30px 10px;
   margin: 0 60px;
@@ -241,4 +244,35 @@ body {
   height: 8px;
   background: #5a80b1;
   margin: 0 22px 0 -30px;
+}
+
+.scrolltop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  opacity: 0.7;
+  background-color: #ccc;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 500;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.scrolltop.active {
+  display: flex;
+}
+.scrolltop:hover {
+  opacity: 1;
+}
+.scrolltop img {
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
 }

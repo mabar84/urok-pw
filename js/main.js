@@ -1,55 +1,6 @@
 const navMenu = document.querySelector(".nav_menu");
 const menuItems = navMenu.querySelectorAll(".menu-item");
 const allSubMenu = document.querySelectorAll(".submenu");
-// const navButtons = document.querySelectorAll(".nav-button");
-// const navButtonsMobile = document.querySelector(".nav-buttons_mobile");
-// const navMenuMobile = document.querySelector(".nav-menu_mobile");
-// const navMenuMobile = document.querySelector(".nav-buttons");
-
-// site-navigate
-// navButtons.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     navButtons.forEach((el) => {
-//       el.classList.remove("active");
-//     });
-//     btn.classList.add("active");
-//   });
-// });
-
-// show/close menu
-// classSelect.addEventListener("click", () => {
-//   menu.classList.toggle("active");
-//   classSelect.classList.toggle("active");
-
-//   function addClass() {
-//     ellipse.classList.toggle("active");
-//   }
-//   ellipse.classList.contains("active") ? setTimeout(addClass, 0) : ellipse.classList.add("active");
-//   // ellipse.classList.contains("active") ? setTimeout(addClass, 800) : ellipse.classList.add("active");
-
-//   allMenuAdditional.forEach((el) => {
-//     el.classList.remove("active");
-//   });
-
-//   document.addEventListener("click", (e) => {
-//     const isClickInsideMenu = menu.contains(e.target);
-//     const isClickInsideClassSelect = classSelect.contains(e.target);
-//     if (!isClickInsideMenu && !isClickInsideClassSelect) {
-//       function removeClass() {
-//         ellipse.classList.remove("active");
-//       }
-
-//       // setTimeout(removeClass, 800);
-//       setTimeout(removeClass, 0);
-//       menu.classList.remove("active");
-//       classSelect.classList.remove("active");
-
-//       allMenuAdditional.forEach((el) => {
-//         el.classList.remove("active");
-//       });
-//     }
-//   });
-// });
 
 // show/close menu-additional
 if (window.innerWidth > 991) {
@@ -67,6 +18,20 @@ if (window.innerWidth > 991) {
     });
   });
 }
+
+//scrolltop
+const scrolltop = document.querySelector(".scrolltop");
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || window.scrollY;
+  scrollTop > 200 ? scrolltop.classList.add("active") : scrolltop.classList.remove("active");
+});
+scrolltop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 // show/close mobile menu
 // navButtonsMobile.addEventListener("click", () => {
