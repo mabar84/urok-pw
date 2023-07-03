@@ -3,6 +3,11 @@
     font-size: 30px;
     padding: 20px;
     border-bottom: 2px solid #5a80b1;
+    font-weight: 700;
+    @include for-575-px {
+        font-size: 20px;
+        padding: 15px;
+    }
 }
 .block-title {
     margin: 1.5em 0 0.5em;

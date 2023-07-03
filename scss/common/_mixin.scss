@@ -34,6 +34,12 @@
   }
 }
 
+@mixin for-991-px {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
 @mixin for-915-px {
   @media (max-width: 915px) {
     @content;
@@ -54,6 +60,12 @@
 
 @mixin for-640-px {
   @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin for-575-px {
+  @media (max-width: 575px) {
     @content;
   }
 }

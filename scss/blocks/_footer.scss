@@ -7,6 +7,9 @@
                 display: none;
             }
         }
+        @include for-991-px {
+            display: none;
+        }
     }
     .footer-info {
         padding: 30px 40px 25px 40px;

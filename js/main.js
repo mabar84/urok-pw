@@ -17,6 +17,12 @@ if (window.innerWidth > 991) {
       item.classList.remove("active");
     });
   });
+} else {
+  menuItems.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      el.classList.toggle("active");
+    });
+  });
 }
 
 //scrolltop
