@@ -500,3 +500,30 @@ body {
   height: 40%;
   object-fit: cover;
 }
+
+.lessons-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lessons-list li {
+  width: 45%;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 15px;
+  max-width: 45%;
+}
+.lessons-list li a {
+  display: block;
+  color: #444;
+  padding: 5px 10px;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.lessons-list li a:hover {
+  text-decoration: underline;
+}
