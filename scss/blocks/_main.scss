@@ -3,41 +3,13 @@
     .content {
         padding: 20px 30px 30px 10px;
         margin: 0 60px;
-    }
-    .main-list {
-        list-style-type: none;
-        counter-reset: num;
-        font-size: 13px;
-        margin-bottom: 20px;
-        display: none;
-        li {
-            padding: 10px 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            a {
-                color: #428bca;
-                margin-left: 35px;
-                &:hover {
-                    color: #e66212;
-                }
-            }
+        @include for-767-px {
+            padding: 20px 30px 30px 0px;
+            margin: 0 20px 0 8px;
         }
-        li:before {
-            content: counter(num) "";
-            counter-increment: num;
-            position: absolute;
-            top: 5px;
-            left: 0;
-            color: #333;
-            font-size: 13px;
-            border-radius: 50%;
-            width: 27px;
-            height: 27px;
-            border: 2px solid #425d9d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @include for-575-px {
+            padding: 0 0 20px 0;
+            margin: 0 20px 0 8px;
         }
     }
 }

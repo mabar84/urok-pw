@@ -1,6 +1,7 @@
 const navMenu = document.querySelector(".nav_menu");
 const menuItems = navMenu.querySelectorAll(".menu-item");
 const allSubMenu = document.querySelectorAll(".submenu");
+const mobHamburger = document.querySelector(".mob-hamburger");
 
 // show/close menu-additional
 if (window.innerWidth > 991) {
@@ -23,21 +24,25 @@ if (window.innerWidth > 991) {
       el.classList.toggle("active");
     });
   });
+  mobHamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 }
 
 //scrolltop
 const scrolltop = document.querySelector(".scrolltop");
-
-window.addEventListener("scroll", () => {
-  let scrollTop = window.pageYOffset || window.scrollY;
-  scrollTop > 200 ? scrolltop.classList.add("active") : scrolltop.classList.remove("active");
-});
-scrolltop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+if (window.innerWidth > 767) {
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || window.scrollY;
+    scrollTop > 200 ? scrolltop.classList.add("active") : scrolltop.classList.remove("active");
   });
-});
+  scrolltop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
 
 // show/close mobile menu
 // navButtonsMobile.addEventListener("click", () => {

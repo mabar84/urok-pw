@@ -1,130 +1,134 @@
-.main-navigation {
-    .nav_menu {
-        display: flex;
-        background-color: #5a80b1;
-        align-items: center;
-        padding: 0 40px;
-        @include for-991-px {
-            padding: 0;
-            flex-direction: column;
-            align-items: start;
+.nav_menu {
+    display: flex;
+    background-color: #5a80b1;
+    align-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    @include for-991-px {
+        padding: 0;
+        flex-direction: column;
+        align-items: start;
+        display: none;
+        &.active {
+            display: flex;
         }
-        .menu-item {
-            white-space: nowrap;
-            position: relative;
-            &::before {
-                display: none;
-                @include for-991-px {
-                    content: "+";
-                    display: block;
-                    position: absolute;
-                    right: -53px;
-                    top: -1px;
-                    width: 53px;
-                    height: 53px;
-                    font-size: 20px;
-                    font-weight: 300;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-left: 1px solid rgba(255, 255, 255, 0.2);
-                    border-top: 1px solid rgba(255, 255, 255, 0.2);
-                    color: #fff;
-                    z-index: 2;
-                    box-sizing: border-box;
-                }
-            }
-            &::after {
-                display: none;
-                @include for-991-px {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    right: -37px;
-                    top: 17px;
-                    width: 20px;
-                    height: 20px;
-                    border: 1px solid #fff;
-                    box-sizing: border-box;
-                    border-radius: 3px;
-                }
-            }
+    }
+    .menu-item {
+        white-space: nowrap;
+        position: relative;
+        &::before {
+            display: none;
             @include for-991-px {
-                width: calc(100% - 50px);
-                padding-right: 0px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            }
-            .menu-item_name {
-                color: #fff;
+                content: "+";
                 display: block;
-                position: relative;
-                padding: 20px 20px;
+                position: absolute;
+                right: -50px;
+                top: -1px;
+                width: 50px;
+                height: 54px;
+                font-size: 20px;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                color: #fff;
+                z-index: 2;
+                box-sizing: border-box;
+            }
+        }
+        &::after {
+            display: none;
+            @include for-991-px {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -35px;
+                top: 17px;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+                border-radius: 3px;
+            }
+        }
+        @include for-991-px {
+            width: calc(100% - 50px);
+            padding-right: 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .menu-item_name {
+            color: #fff;
+            display: block;
+            position: relative;
+            padding: 20px 20px;
+            @include for-991-px {
+                padding: 17px 20px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 4px;
+                left: 50%;
+                right: auto;
+                top: auto;
+                margin: 0 0 0 -2px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 3px 0 3px;
+                border-color: rgba(255, 255, 255, 0.7) transparent transparent transparent;
+                transition: 0.3s;
                 @include for-991-px {
-                    padding: 17px 20px;
+                    display: none;
                 }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    bottom: 4px;
-                    left: 50%;
-                    right: auto;
-                    top: auto;
-                    margin: 0 0 0 -2px;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 4px 3px 0 3px;
-                    border-color: rgba(255, 255, 255, 0.7) transparent transparent transparent;
-                    transition: 0.3s;
-                    @include for-991-px {
-                        display: none;
-                    }
-                }
+            }
+            &:hover {
+                transition: 0.3s;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+        .submenu {
+            display: none;
+            padding: 0;
+            position: absolute;
+            background-color: #5a80b1;
+            z-index: 1;
+            @include for-991-px {
+                width: 100%;
+                width: calc(100% + 50px);
+                position: static;
+            }
+            .submenu-item {
+                color: #fff;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                white-space: nowrap;
+                z-index: 1;
+                position: relative;
                 &:hover {
                     transition: 0.3s;
                     background-color: rgba(255, 255, 255, 0.1);
                 }
+                & a {
+                    padding: 18px;
+                    display: block;
+                    @include for-991-px {
+                        padding: 17px 20px 17px 40px;
+                    }
+                }
+            }
+        }
+        &.active {
+            &:before {
+                @include for-991-px {
+                    content: "-";
+                    font-size: 30px;
+                    font-weight: 300;
+                }
             }
             .submenu {
-                display: none;
-                padding: 0;
-                position: absolute;
-                background-color: #5a80b1;
-                z-index: 1;
-                @include for-991-px {
-                    width: calc(100% + 53px);
-                    position: static;
-                }
-                .submenu-item {
-                    color: #fff;
-                    border-top: 1px solid rgba(255, 255, 255, 0.2);
-                    white-space: nowrap;
-                    z-index: 1;
-                    position: relative;
-                    &:hover {
-                        transition: 0.3s;
-                        background-color: rgba(255, 255, 255, 0.1);
-                    }
-                    & a {
-                        padding: 18px;
-                        display: block;
-                        @include for-991-px {
-                            padding: 17px 20px 17px 40px;
-                        }
-                    }
-                }
-            }
-            &.active {
-                &:before {
-                    @include for-991-px {
-                        content: "-";
-                        font-size: 30px;
-                        font-weight: 300;
-                    }
-                }
-                .submenu {
-                    display: block;
-                }
+                display: block;
             }
         }
     }
