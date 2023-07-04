@@ -501,6 +501,34 @@ body {
   object-fit: cover;
 }
 
+.warning {
+  padding: 20px 30px 20px 70px;
+  margin: 35px 0;
+  position: relative;
+  clear: both;
+  line-height: 1.4;
+  color: #777;
+  background: #fff4d4;
+  border-radius: 0 6px 6px 0;
+}
+.warning:before {
+  content: "!";
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f58128;
+}
+
 .lessons-list {
   display: flex;
   flex-wrap: wrap;
@@ -534,7 +562,14 @@ body {
 }
 
 .books.content {
+  margin: 0 60px;
   padding: 0px 40px;
+}
+@media (max-width: 1200px) {
+  .books.content {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 .books .text {
   font-size: 16px;
@@ -542,10 +577,83 @@ body {
   color: #777;
   margin-top: 15px;
 }
-.books .alignleft {
+.books .text:first-child {
+  margin-top: 0;
+}
+.books .book-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 575px) {
+  .books .book-description {
+    flex-direction: column;
+  }
+}
+.books .book-description .book-cover img {
   max-width: 150px;
   height: auto;
   border-style: none;
-  float: left;
   margin: 0 45px 15px 0;
+}
+
+.razdely_uchebn {
+  font-weight: 500;
+  font-size: 19px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.razdely_uchebn a {
+  color: #428bca;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.razdely_uchebn a:hover {
+  color: #e66212;
+}
+.razdely_uchebn p.bold {
+  font-weight: 600;
+}
+
+.img_link > a {
+  display: inline-block;
+  min-width: 48px;
+  height: 28px;
+  line-height: 29px;
+  color: #fff;
+  background: #7a37e5;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.img_link > a:focus {
+  color: #e66212;
+}
+.img_link > a:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 17px;
+  background: url("../../img/icons/gal.png") 0 0 no-repeat;
+  left: 50%;
+  top: 50%;
+  margin: -8px 0 0 -7px;
+  z-index: 10;
+}
+.img_link > a:hover {
+  color: #fff;
+  background: #fff;
+  -moz-box-shadow: inset 0 0 0 1px #7a37e5;
+  -webkit-box-shadow: inset 0 0 0 1px #7a37e5;
+  box-shadow: inset 0 0 0 1px #7a37e5;
+}
+.img_link > a:hover::after {
+  display: block;
 }

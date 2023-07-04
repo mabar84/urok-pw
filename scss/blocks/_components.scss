@@ -130,3 +130,30 @@
         object-fit: cover;
     }
 }
+.warning {
+    padding: 20px 30px 20px 70px;
+    margin: 35px 0;
+    position: relative;
+    clear: both;
+    line-height: 1.4;
+    color: #777;
+    background: #fff4d4;
+    border-radius: 0 6px 6px 0;
+    &:before {
+        content: "!";
+        color: #fff;
+        font-size: 22px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f58128;
+    }
+}

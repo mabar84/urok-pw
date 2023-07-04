@@ -1,18 +1,97 @@
 .books {
     &.content {
+        margin: 0 60px;
         padding: 0px 40px;
+        @include for-1200-px {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
     }
     .text {
         font-size: 16px;
         line-height: 1.4;
         color: #777;
         margin-top: 15px;
+        &:first-child {
+            margin-top: 0;
+        }
     }
-    .alignleft {
-        max-width: 150px;
-        height: auto;
-        border-style: none;
-        float: left;
-        margin: 0 45px 15px 0;
+    .book-description {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @include for-575-px {
+            flex-direction: column;
+        }
+        .book-cover img {
+            max-width: 150px;
+            height: auto;
+            border-style: none;
+            // float: left;
+            margin: 0 45px 15px 0;
+        }
+    }
+}
+.razdely_uchebn {
+    font-weight: 500;
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 10px;
+    a {
+        color: #428bca;
+        font-weight: 400;
+        transition: 0.3s;
+        &:hover {
+            color: #e66212;
+        }
+    }
+    p {
+        &.bold {
+            font-weight: 600;
+        }
+    }
+}
+.img_link > a {
+    display: inline-block;
+    min-width: 48px;
+    height: 28px;
+    line-height: 29px;
+    color: #fff;
+    background: #7a37e5;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    box-sizing: border-box;
+    padding: 0 5px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    &:focus {
+        color: #e66212;
+    }
+    &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        width: 15px;
+        height: 17px;
+        // background-image: url("../../img/icons/gal.png");
+        // background: red;
+        background: url("../../img/icons/gal.png") 0 0 no-repeat;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0 0 -7px;
+        z-index: 10;
+    }
+    &:hover {
+        color: #fff;
+        background: #fff;
+        -moz-box-shadow: inset 0 0 0 1px #7a37e5;
+        -webkit-box-shadow: inset 0 0 0 1px #7a37e5;
+        box-shadow: inset 0 0 0 1px #7a37e5;
+        &::after {
+            display: block;
+        }
     }
 }
