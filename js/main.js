@@ -56,6 +56,15 @@ if (window.innerWidth > 767) {
   });
 }
 
+//collapse
+const collapseContainers = document.querySelectorAll(".collapse-container");
+collapseContainers?.forEach((item) => {
+  const switcher = item.querySelector(".switch");
+  switcher.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+
 // const imgLink = document.querySelector(".img_link");
 // for (let index = 1; index < 111; index++) {
 //   imgLink.insertAdjacentHTML(
