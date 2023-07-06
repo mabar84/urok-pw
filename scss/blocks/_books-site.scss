@@ -132,10 +132,9 @@
 }
 
 .social-networks {
-    margin: 0 40px;
     border: 6px solid #efede7;
     padding: 20px;
-    margin-bottom: 30px;
+    margin: 0 40px;
     p {
         text-align: center;
         font-size: 17px;
@@ -143,8 +142,6 @@
         margin-bottom: 13px;
     }
     .icons {
-        height: 20px;
-
         display: flex;
         justify-content: center;
         gap: 15px;

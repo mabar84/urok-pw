@@ -65,6 +65,26 @@ collapseContainers?.forEach((item) => {
   });
 });
 
+//rating
+const rating = document.getElementById("rating");
+if (rating) {
+  rating.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const rateWrapper = rating.closest(".rate-wrapper");
+
+    if (e.target.closest("label")) {
+      const label = e.target.closest("label");
+      const name = "." + label.getAttribute("for");
+      this.querySelector(name).checked = true;
+      const selectedRating = name[6];
+
+      rateWrapper.classList.remove("empty");
+      console.log("block has value ", selectedRating);
+    }
+  });
+}
+
 // const imgLink = document.querySelector(".img_link");
 // for (let index = 1; index < 111; index++) {
 //   imgLink.insertAdjacentHTML(

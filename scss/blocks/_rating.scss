@@ -1,0 +1,69 @@
+.rate-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px 20px;
+    .rate-title {
+        font-size: 1.05em;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+    }
+    .rate-text p {
+        font-size: 13px;
+        font-style: italic;
+        .value {
+            font-weight: 600;
+        }
+    }
+    .no-ratings {
+        display: none;
+    }
+    .are-ratings {
+        display: block;
+    }
+    &.empty {
+        .no-ratings {
+            display: block;
+        }
+        .are-ratings {
+            display: none;
+        }
+    }
+    .rate {
+        align-self: start;
+    }
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+    .rate:not(:checked) > label {
+        float: right;
+        width: 27px;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    .rate > input ~ label {
+        // margin: 0 6px;
+    }
+    .rate > input:checked ~ label {
+        path {
+            fill: #5a80b1;
+        }
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        path {
+            fill: #5a80b1;
+        }
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        path {
+            fill: #5a80b1;
+        }
+    }
+}
