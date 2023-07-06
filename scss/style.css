@@ -701,6 +701,11 @@ body {
   padding: 20px;
   margin: 0 40px;
 }
+@media (max-width: 1200px) {
+  .social-networks {
+    margin: 0 20px 0 8px;
+  }
+}
 .social-networks p {
   text-align: center;
   font-size: 17px;
@@ -711,6 +716,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .social-networks .icons .icon {
   width: 35px;
@@ -859,6 +865,11 @@ body {
   padding: 20px;
   margin: 0 40px;
 }
+@media (max-width: 1200px) {
+  .social-networks {
+    margin: 0 20px 0 8px;
+  }
+}
 .social-networks p {
   text-align: center;
   font-size: 17px;
@@ -869,6 +880,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .social-networks .icons .icon {
   width: 35px;
@@ -887,6 +899,11 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 40px 20px;
+}
+@media (max-width: 1200px) {
+  .rate-wrapper {
+    margin: 0 20px 20px 8px;
+  }
 }
 .rate-wrapper .rate-title {
   font-size: 1.05em;
