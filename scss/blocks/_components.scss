@@ -126,6 +126,9 @@
     display: none;
     &.active {
         display: flex;
+        @include for-767-px {
+            display: none;
+        }
     }
     &:hover {
         opacity: 1;
