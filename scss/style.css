@@ -278,7 +278,7 @@ body {
   padding: 0;
   position: absolute;
   background-color: #5a80b1;
-  z-index: 1;
+  z-index: 2;
 }
 @media (max-width: 991px) {
   .nav_menu .menu-item .submenu {
@@ -581,6 +581,7 @@ body {
   line-height: 1.4;
   color: #777;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .books .text:first-child {
   margin-top: 0;
@@ -598,7 +599,7 @@ body {
   max-width: 150px;
   height: auto;
   border-style: none;
-  margin: 0 45px 15px 0;
+  margin: 0 45px 0 0;
 }
 
 .razdely_uchebn {
@@ -745,6 +746,7 @@ body {
   line-height: 1.4;
   color: #777;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .books .text:first-child {
   margin-top: 0;
@@ -762,7 +764,7 @@ body {
   max-width: 150px;
   height: auto;
   border-style: none;
-  margin: 0 45px 15px 0;
+  margin: 0 45px 0 0;
 }
 
 .razdely_uchebn {
