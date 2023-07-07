@@ -85,6 +85,40 @@ if (rating) {
   });
 }
 
+// feedback, required fields
+const feedbackForm = document.querySelector(".feedback-form");
+const fields = document.querySelectorAll(".feedback-field");
+// const errorMessage = document.querySelector(".error-message");
+const sendData = document.getElementById("send");
+if (sendData) {
+  sendData.addEventListener("click", (e) => {
+    let isAllFieldFilled = true;
+
+    e.preventDefault();
+    fields.forEach((f) => {
+      if (!f.value) {
+        f.classList.add("error");
+        // errorMessage.classList.add("error");
+        isAllFieldFilled = false;
+      }
+    });
+    if (isAllFieldFilled) {
+      console.log(document.getElementById("name").value);
+      console.log(document.getElementById("mail").value);
+      console.log(document.getElementById("subject").value);
+      console.log(document.getElementById("message").value);
+    }
+  });
+
+  fields.forEach((f) => {
+    f.addEventListener("input", () => {
+      if (f.value) {
+        f.classList.remove("error");
+      }
+    });
+  });
+}
+
 // const imgLink = document.querySelector(".img_link");
 // for (let index = 1; index < 111; index++) {
 //   imgLink.insertAdjacentHTML(

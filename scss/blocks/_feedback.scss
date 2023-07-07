@@ -1,0 +1,49 @@
+.flex-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 0 40px;
+    .main-title {
+        text-align: left;
+        padding-left: 0;
+    }
+    @include for-1200-px {
+        padding: 0 20px;
+    }
+    .left {
+        flex-grow: 1;
+    }
+    .right {
+        width: 300px;
+        @include for-991-px {
+            display: none;
+        }
+    }
+}
+.feedback-form {
+    margin-top: 20px;
+    font-size: 17px;
+    .feedback-field {
+        padding: 7px 15px;
+        margin-bottom: 7px;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        color: #333;
+        border: 1px solid #ccc;
+        display: block;
+        border-radius: 4px;
+        &::placeholder {
+            font-size: inherit;
+        }
+        &:focus {
+            border: 1px solid #000;
+        }
+        &.error {
+            border: 1px solid red;
+        }
+    }
+    input {
+        width: 60%;
+    }
+}
