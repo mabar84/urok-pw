@@ -35,6 +35,12 @@
     font-size: 1.5em;
     line-height: 1.1;
     font-weight: 700;
+    &_center {
+        text-align: center;
+    }
+    &_mb20 {
+        margin-bottom: 20px;
+    }
     @include for-767-px {
         font-size: 1.4em;
     }

@@ -1,8 +1,11 @@
 .flex-container {
     display: flex;
-    gap: 30px;
+    gap: 90px;
     justify-content: space-between;
     padding: 0 40px;
+    @include for-1200-px {
+        gap: 30px;
+    }
     .main-title {
         text-align: left;
         padding-left: 0;
@@ -15,6 +18,9 @@
     }
     .right {
         width: 300px;
+        height: 500px;
+        background: #000;
+        flex-shrink: 0;
         @include for-991-px {
             display: none;
         }
@@ -45,5 +51,103 @@
     }
     input {
         width: 60%;
+    }
+    textarea {
+        width: 100%;
+    }
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    @include for-767-px {
+        gap: 20px;
+        justify-content: center;
+    }
+    .card {
+        width: 330px;
+        @include for-1200-px {
+            width: 280px;
+        }
+        @include for-991-px {
+            width: 330px;
+        }
+        @include for-767-px {
+            width: 45%;
+        }
+        @include for-575-px {
+            width: 330px;
+        }
+        @include for-440-px {
+            width: 280px;
+        }
+        &:hover {
+            .card-top {
+                background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+                opacity: 1;
+            }
+        }
+        .card-top {
+            height: 140px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px 15px;
+            position: relative;
+            background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            .comments {
+                color: #fff;
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+                font-size: 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    right: 12px;
+                    font-size: 13px;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url("../../img/icons/comment.svg");
+                }
+            }
+            .category {
+                font-size: 0.8em;
+                line-height: 1.7;
+                color: #fff;
+                margin-right: 30px;
+            }
+        }
+        .card-title {
+            color: #333;
+            margin-bottom: 14px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 1.1;
+            &:hover {
+                color: #e66212;
+            }
+        }
+        .card-text {
+            font-size: 0.8em;
+            line-height: 1.5;
+            color: #333;
+            &.card-numbers {
+                word-break: break-all;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
     }
 }
