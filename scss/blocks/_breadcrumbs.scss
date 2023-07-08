@@ -1,12 +1,15 @@
 .breadcrumbs {
     padding-top: 20px;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1;
     flex-wrap: wrap;
+    @include for-1200-px {
+        margin-left: 20px;
+    }
     @include for-767-px {
         display: none;
     }

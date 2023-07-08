@@ -4,14 +4,15 @@
     justify-content: space-between;
     padding: 0 40px;
     @include for-1200-px {
+        padding: 0 20px;
         gap: 30px;
+    }
+    @include for-767-px {
+        padding: 0 8px;
     }
     .main-title {
         text-align: left;
         padding-left: 0;
-    }
-    @include for-1200-px {
-        padding: 0 20px;
     }
     .left {
         flex-grow: 1;
@@ -25,7 +26,6 @@
         .search {
             width: 100%;
             position: relative;
-
             .search-input {
                 display: block;
                 width: 100%;
@@ -110,7 +110,7 @@
             width: 330px;
         }
         @include for-440-px {
-            width: 280px;
+            width: 100%;
         }
         &:hover {
             .card-top {

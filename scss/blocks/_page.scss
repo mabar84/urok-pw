@@ -13,6 +13,9 @@
         color: #777;
         margin-top: 15px;
         margin-bottom: 20px;
+        &.color333 {
+            color: #333;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -163,7 +166,6 @@
         text-decoration: underline;
     }
 }
-
 .social-networks {
     border: 6px solid #efede7;
     padding: 20px;
@@ -194,6 +196,23 @@
                     -webkit-transform: scale(1.2);
                     -ms-transform: scale(1.2);
                     transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+.list-404 {
+    ul {
+        padding-left: 40px;
+        li {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            // color: red;
+            a {
+                color: #428bca;
+                &:hover {
+                    color: #e66212;
                 }
             }
         }

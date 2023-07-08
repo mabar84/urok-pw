@@ -1,7 +1,5 @@
 .title {
-    // font-size: 30px;
     font-size: 2em;
-    // padding: 0 20px 20px;
     padding: 0 20px 0 140px;
     font-weight: 700;
     margin: 0 auto 25px;
@@ -10,14 +8,10 @@
         font-size: 1.6em;
     }
     @include for-767-px {
-        // font-size: 26px;
-        // text-align: left;
-        // padding: 0 8px 15px;
-        padding: 0 8px 0px 8px;
+        padding: 0;
     }
     @include for-575-px {
         font-size: 1.3em;
-        // font-size: 20px;
     }
     &.main-title {
         text-align: center;
