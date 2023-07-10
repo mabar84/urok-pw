@@ -121,7 +121,10 @@
     &.active {
         display: flex;
         @include for-767-px {
-            display: none;
+            bottom: 20px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
         }
     }
     &:hover {

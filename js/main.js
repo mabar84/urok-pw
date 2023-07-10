@@ -43,18 +43,16 @@ if (window.innerWidth > 991) {
 
 //scrolltop
 const scrolltop = document.querySelector(".scrolltop");
-if (window.innerWidth > 767) {
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || window.scrollY;
-    scrollTop > 200 ? scrolltop.classList.add("active") : scrolltop.classList.remove("active");
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || window.scrollY;
+  scrollTop > 200 ? scrolltop.classList.add("active") : scrolltop.classList.remove("active");
+});
+scrolltop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
-  scrolltop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-}
+});
 
 //collapse
 const collapseContainers = document.querySelectorAll(".collapse-container");
