@@ -998,14 +998,6 @@ body {
   line-height: 1.5;
   color: #333;
 }
-.cards .card .card-text.card-numbers {
-  word-break: break-all;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
 
 .widget-title {
   margin: 0 0 15px;
